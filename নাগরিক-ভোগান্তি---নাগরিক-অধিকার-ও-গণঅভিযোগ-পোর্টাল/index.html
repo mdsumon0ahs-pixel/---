@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>নাগরিক ভোগান্তি - নাগরিক অধিকার ও গণঅভিযোগ পোর্টাল</title>
+  <meta name="description" content="নাগরিক হয়রানি ও সরকারি অফিস দুর্নীতির বিরুদ্ধে সম্মিলিত উন্মুক্ত প্ল্যাটফর্ম। অভিজ্ঞতা শেয়ার করুন, আইনি সমাধান জানুন ও সচেতনতা বৃদ্ধি করুন।" />
+  <meta property="og:title" content="নাগরিক ভোগান্তি - নাগরিক অধিকার ও গণঅভিযোগ পোর্টাল" />
+  <meta property="og:description" content="নাগরিক হয়রানি ও সরকারি অফিস দুর্নীতির বিরুদ্ধে সম্মিলিত উন্মুক্ত প্ল্যাটফর্ম। অভিজ্ঞতা শেয়ার করুন, আইনি সমাধান জানুন ও সচেতনতা বৃদ্ধি করুন।" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Hind Siliguri for Bengali + Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            bengali: ['"Hind Siliguri"', 'sans-serif'],
+            sans: ['"Hind Siliguri"', '"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            rosebrand: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              500: '#F43F5E',
+              600: '#E11D48',
+              700: '#BE123C',
+              800: '#9F1239',
+              900: '#881337',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .font-mono-nums {
+      font-family: 'JetBrains Mono', monospace;
+      font-variant-numeric: tabular-nums;
+    }
+    /* Smooth custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-rose-600 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. RESPONSIVE LIGHT NAVBAR (ZERO MOBILE OVERFLOW GUARANTEED) -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-2">
+        
+        <!-- Left: Brand Logo & Desktop Clock -->
+        <div class="flex items-center gap-3 sm:gap-4 min-w-0 shrink">
+          <a href="#" class="flex items-center gap-2 text-slate-900 group shrink min-w-0">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 text-white flex items-center justify-center text-sm sm:text-base shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <span class="text-base sm:text-lg font-bold leading-tight truncate">নাগরিক ভোগান্তি</span>
+              <span class="hidden sm:inline-block text-[10px] text-slate-500 font-medium tracking-wide truncate">নাগরিক অধিকার ও গণঅভিযোগ পোর্টাল</span>
+            </div>
+          </a>
+
+          <!-- Live Bengali Clock (Desktop only) -->
+          <div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 text-xs text-slate-600 font-medium whitespace-nowrap shrink-0 border border-slate-200/60">
+            <i class="fa-regular fa-clock text-rose-600 text-xs"></i>
+            <span id="bengali-live-clock" class="font-mono-nums">লোড হচ্ছে...</span>
+          </div>
+        </div>
+
+        <!-- Center: Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-600 shrink-0">
+          <a href="#feed-section" class="hover:text-rose-600 transition-colors whitespace-nowrap py-1">অভিযোগসমূহ</a>
+          <button id="nav-open-advisor" class="hover:text-rose-600 transition-colors whitespace-nowrap flex items-center gap-1.5 py-1">
+            <i class="fa-solid fa-robot text-teal-600 text-xs"></i>
+            <span>AI নাগরিক পরামর্শক</span>
+          </button>
+          <a href="#stats-section" class="hover:text-rose-600 transition-colors whitespace-nowrap py-1">পরিসংখ্যান ও প্রভাব</a>
+          <a href="#guidelines-section" class="hover:text-rose-600 transition-colors whitespace-nowrap py-1">জরুরি গাইডলাইন</a>
+        </nav>
+
+        <!-- Right: Mobile-friendly Action Buttons -->
+        <div class="flex items-center gap-2 shrink-0">
+          
+          <!-- Sound Toggle (Desktop/Tablet) -->
+          <button id="sound-toggle-btn" class="hidden sm:flex w-8 h-8 rounded-lg items-center justify-center text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors border border-transparent hover:border-slate-200" title="সাউন্ড এফেক্ট চালু/বন্ধ" aria-label="সাউন্ড">
+            <i class="fa-solid fa-volume-high text-xs" id="sound-icon"></i>
+          </button>
+
+          <!-- Primary CTA Button (Compact on Mobile, Full on Desktop) -->
+          <button id="open-report-modal-btn" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-rose-600 hover:bg-rose-700 active:scale-95 rounded-xl shadow-xs transition-all whitespace-nowrap flex items-center gap-1.5 shrink-0">
+            <i class="fa-solid fa-pen-nib text-xs"></i>
+            <span class="sm:inline">অভিযোগ জানান</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden w-9 h-9 flex items-center justify-center text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 active:bg-slate-300 rounded-xl transition-colors shrink-0" aria-label="মেনু খুলুন/বন্ধ করুন">
+            <i class="fa-solid fa-bars text-sm" id="hamburger-icon"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Mobile Dropdown Drawer (Controlled smoothly via JS) -->
+      <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-slate-200 py-3 space-y-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
+        
+        <!-- Mobile Clock Indicator -->
+        <div class="px-3 py-1.5 text-xs text-slate-500 bg-slate-100/80 rounded-lg flex items-center gap-1.5 mb-2 font-mono-nums">
+          <i class="fa-regular fa-clock text-rose-600"></i>
+          <span id="bengali-live-clock-mobile">লোড হচ্ছে...</span>
+        </div>
+
+        <a href="#feed-section" class="mobile-nav-link flex items-center gap-2.5 px-3 py-2 text-sm font-medium rounded-xl text-slate-700 hover:bg-slate-100 hover:text-rose-600 transition-colors">
+          <i class="fa-solid fa-list-check text-slate-400 w-5"></i>
+          <span>অভিযোগসমূহ (পাবলিক ফিড)</span>
+        </a>
+
+        <button id="mobile-open-advisor" class="w-full text-left flex items-center gap-2.5 px-3 py-2 text-sm font-medium rounded-xl text-teal-700 hover:bg-teal-50 transition-colors">
+          <i class="fa-solid fa-robot text-teal-600 w-5"></i>
+          <span>AI নাগরিক পরামর্শক (আইনি সমাধান)</span>
+        </button>
+
+        <a href="#stats-section" class="mobile-nav-link flex items-center gap-2.5 px-3 py-2 text-sm font-medium rounded-xl text-slate-700 hover:bg-slate-100 hover:text-rose-600 transition-colors">
+          <i class="fa-solid fa-chart-pie text-slate-400 w-5"></i>
+          <span>পরিসংখ্যান ও ঘুষ ট্র্যাকার</span>
+        </a>
+
+        <a href="#guidelines-section" class="mobile-nav-link flex items-center gap-2.5 px-3 py-2 text-sm font-medium rounded-xl text-slate-700 hover:bg-slate-100 hover:text-rose-600 transition-colors">
+          <i class="fa-solid fa-phone-volume text-slate-400 w-5"></i>
+          <span>জরুরি সরকারি হটলাইন ও গাইডলাইন</span>
+        </a>
+
+        <div class="pt-2 border-t border-slate-100 flex items-center justify-between px-3 text-xs text-slate-500">
+          <span>শব্দ সংকেত (Audio Effects)</span>
+          <button id="mobile-sound-toggle-btn" class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">চালু</button>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none max-w-sm w-full px-4 sm:px-0"></div>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION (PURE LIGHT SAAS DESIGN) -->
+  <!-- ========================================================================= -->
+  <section class="bg-gradient-to-b from-white via-slate-50/60 to-slate-50 border-b border-slate-200/80 py-8 sm:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <!-- Headline & Introduction -->
+      <div class="max-w-3xl space-y-3.5 text-center sm:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
+          <span>সম্পূর্ণ বেনামী ও নিরাপদ নাগরিক অধিকার প্ল্যাটফর্ম</span>
+        </div>
+        
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+          নাগরিক হয়রানি ও দুর্নীতির বিরুদ্ধে <span class="text-rose-600">সম্মিলিত আওয়াজ।</span>
+        </h1>
+        
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          পাসপোর্ট, বিআরটিএ, এনআইডি, হাসপাতাল বা ভূমি অফিসে অন্যায্য হয়রানি ও অবৈধ অর্থ দাবির অভিজ্ঞতা সম্পূর্ণ নিরাপদে নথিবদ্ধ করুন। আপনার একটি সতর্কবার্তা শত শত নাগরিককে সচেতন করবে।
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 pt-2">
+          <button id="hero-report-btn" class="px-5 py-2.5 text-xs sm:text-sm font-semibold text-white bg-rose-600 hover:bg-rose-700 active:scale-95 rounded-xl shadow-xs transition-all flex items-center gap-2">
+            <i class="fa-solid fa-bullhorn text-xs"></i>
+            <span>বেনামে অভিযোগ জানান</span>
+          </button>
+          <button id="hero-advisor-btn" class="px-5 py-2.5 text-xs sm:text-sm font-semibold text-teal-800 bg-white hover:bg-teal-50/70 border border-teal-200 rounded-xl shadow-xs transition-all flex items-center gap-2">
+            <i class="fa-solid fa-robot text-teal-600 text-xs"></i>
+            <span>AI নাগরিক পরামর্শক</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Stat Counters Strip (Light UI with subtle borders & clean cards) -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5" id="stats-section">
+        
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-xs flex items-center gap-4">
+          <div class="w-11 h-11 rounded-xl bg-rose-50 border border-rose-100 text-rose-600 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-file-invoice"></i>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block font-medium">মোট নথিবদ্ধ অভিযোগ</span>
+            <div class="text-2xl sm:text-3xl font-extrabold font-mono-nums text-slate-900" id="stat-total-complaints">০</div>
+            <span class="text-[11px] text-rose-600 font-medium">সারা দেশ থেকে নিবন্ধিত</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-xs flex items-center gap-4">
+          <div class="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block font-medium">সমাধান ও পরামর্শপ্রাপ্ত</span>
+            <div class="text-2xl sm:text-3xl font-extrabold font-mono-nums text-emerald-600" id="stat-resolved-complaints">০</div>
+            <span class="text-[11px] text-emerald-700 font-medium">নাগরিক টিপসে নিষ্পত্তি</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-xs flex items-center gap-4">
+          <div class="w-11 h-11 rounded-xl bg-amber-50 border border-amber-100 text-amber-600 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block font-medium">দাবিকৃত অবৈধ ঘুষ / ফি রিপোর্ট</span>
+            <div class="text-2xl sm:text-3xl font-extrabold font-mono-nums text-amber-600" id="stat-total-bribe">৳০</div>
+            <span class="text-[11px] text-slate-500 font-medium">অন্যায়ভাবে দাবিকৃত অর্থ</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Search & Category Pill Filters (Clean Light Toolbar) -->
+      <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-xs space-y-3.5">
+        
+        <!-- Search bar -->
+        <div class="relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs sm:text-sm"></i>
+          <input type="text" id="feed-search-input" placeholder="কীওয়ার্ড, স্থান (উদাঃ আগারগাঁও, চট্টগ্রাম) বা দপ্তরের নাম দিয়ে খুঁজুন..." class="w-full pl-10 pr-9 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-600 text-slate-800 placeholder:text-slate-400 transition-all" />
+          <button id="clear-search-btn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs">
+            <i class="fa-solid fa-circle-xmark text-sm"></i>
+          </button>
+        </div>
+
+        <!-- Category Pill Filters -->
+        <div class="space-y-1.5">
+          <div class="text-xs font-semibold text-slate-500 flex items-center justify-between">
+            <span>ক্যাটাগরি ফিল্টার:</span>
+            <span id="active-filter-label" class="text-rose-600 font-medium">সকল সেবা</span>
+          </div>
+          
+          <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs no-scrollbar" id="category-pills-container">
+            <button data-cat="all" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-rose-600 text-white shadow-xs transition-all">
+              সকল (সবাই)
+            </button>
+            <button data-cat="passport" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+              🛂 পাসপোর্ট অফিস
+            </button>
+            <button data-cat="brta" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+              🚗 বিআরটিএ ও লাইসেন্স
+            </button>
+            <button data-cat="nid" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+              🪪 জাতীয় পরিচয়পত্র (NID)
+            </button>
+            <button data-cat="land" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+              📜 ভূমি ও রেজিস্ট্রি অফিস
+            </button>
+            <button data-cat="hospital" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+              🏥 হাসপাতাল ও স্বাস্থ্যসেবা
+            </button>
+            <button data-cat="roads" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+              🚧 রাস্তাঘাট ও ড্রেনেজ
+            </button>
+            <button data-cat="citycorp" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+              🏛️ সিটি কর্পোরেশন / পৌরসভা
+            </button>
+            <button data-cat="utility" class="cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+              ⚡ বিদ্যুৎ ও গ্যাস
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3. MAIN GRIEVANCES FEED (PURE LIGHT CARDS & SHADOWS) -->
+  <!-- ========================================================================= -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6" id="feed-section">
+    
+    <!-- Feed Header & Sorters -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-200 pb-3.5">
+      <div>
+        <h2 class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
+          <span>নাগরিকদের সাম্প্রতিক অভিজ্ঞতা ও অভিযোগ</span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-slate-200 text-slate-700 font-mono-nums font-semibold" id="feed-count-badge">০</span>
+        </h2>
+        <p class="text-xs text-slate-500 mt-0.5">নিরাপদ থাকুন, অভিজ্ঞতা জানুন এবং কমেন্টে প্রতিকারের পথ নির্দেশ করুন।</p>
+      </div>
+
+      <!-- Sorter dropdown -->
+      <div class="flex items-center gap-2 text-xs self-end sm:self-auto">
+        <span class="text-slate-400 font-medium">সাজান:</span>
+        <select id="feed-sort-select" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-700 focus:outline-none focus:ring-2 focus:ring-rose-600 shadow-2xs font-medium">
+          <option value="newest">সর্বশেষ আগে</option>
+          <option value="most_upvoted">সর্বাধিক ভুক্তভোগী (সমর্থন)</option>
+          <option value="highest_bribe">সর্বোচ্চ দাবিকৃত ঘুষ</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grievances Responsive Grid (2-column on tablet, 3-column on desktop) -->
+    <div id="grievances-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-feed-state" class="hidden bg-white rounded-2xl p-10 text-center border border-slate-200 shadow-xs space-y-3.5">
+      <div class="w-14 h-14 mx-auto rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-xl">
+        <i class="fa-solid fa-folder-open"></i>
+      </div>
+      <h3 class="text-base font-bold text-slate-800">কোনো অভিযোগ খুঁজে পাওয়া যায়নি</h3>
+      <p class="text-xs text-slate-500 max-w-sm mx-auto">
+        নির্বাচিত ক্যাটাগরি বা অনুসন্ধানের সাথে মিল রেখে কোনো অভিযোগ নেই। প্রথম ব্যক্তি হিসেবে আপনার অভিজ্ঞতা নথিবদ্ধ করুন।
+      </p>
+      <button id="empty-state-report-btn" class="px-4 py-2 text-xs font-semibold text-white bg-rose-600 hover:bg-rose-700 rounded-xl transition-all shadow-xs">
+        <i class="fa-solid fa-plus mr-1"></i> নতুন অভিযোগ লিখুন
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 4. EMERGENCY GUIDELINES & HOTLINES SECTION -->
+  <!-- ========================================================================= -->
+  <section id="guidelines-section" class="bg-white border-t border-slate-200 py-10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="max-w-3xl space-y-1.5">
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-shield-halved text-emerald-600"></i>
+          <span>জরুরি নাগরিক প্রতিকার হেল্পলাইন ও পরামর্শ</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500">
+          ঘুষ দাবি বা বেআইনি দীর্ঘসূত্রতার শিকার হলে সরাসরি নিচের সরকারি হটলাইনে কল করে তাৎক্ষণিক সহায়তা গ্রহণ করুন:
+        </p>
+      </div>
+
+      <!-- Hotlines Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
+        
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1 hover:border-rose-300 transition-colors shadow-2xs">
+          <span class="text-xs font-semibold text-slate-600 block">দুর্নীতি দমন কমিশন</span>
+          <div class="text-2xl font-bold font-mono-nums text-rose-600">১০৬</div>
+          <span class="text-[10px] text-slate-400 block">টোল-ফ্রি সরাসরি অভিযোগ</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1 hover:border-teal-300 transition-colors shadow-2xs">
+          <span class="text-xs font-semibold text-slate-600 block">জাতীয় কল সেন্টার (সেবা)</span>
+          <div class="text-2xl font-bold font-mono-nums text-teal-700">৩৩৩</div>
+          <span class="text-[10px] text-slate-400 block">সকল সরকারি সেবা তথ্য</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1 hover:border-blue-300 transition-colors shadow-2xs">
+          <span class="text-xs font-semibold text-slate-600 block">জরুরি সেবা (পুলিশ)</span>
+          <div class="text-2xl font-bold font-mono-nums text-blue-600">৯৯৯</div>
+          <span class="text-[10px] text-slate-400 block">তাৎক্ষণিক পুলিশি সুরক্ষা</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1 hover:border-amber-300 transition-colors shadow-2xs">
+          <span class="text-xs font-semibold text-slate-600 block">ভূমি সেবা হটলাইন</span>
+          <div class="text-2xl font-bold font-mono-nums text-amber-600">১৬১২২</div>
+          <span class="text-[10px] text-slate-400 block">নামজারি ও খতিয়ান সংক্রান্ত</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1 hover:border-purple-300 transition-colors shadow-2xs">
+          <span class="text-xs font-semibold text-slate-600 block">ভোক্তা অধিকার সংরক্ষণ</span>
+          <div class="text-2xl font-bold font-mono-nums text-purple-600">১৬১২১</div>
+          <span class="text-[10px] text-slate-400 block">অতিরিক্ত ফি ও বাটপারি রোধ</span>
+        </div>
+
+      </div>
+
+      <!-- Actionable Whistleblower Protection Tips Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1 text-xs leading-relaxed">
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5 shadow-2xs">
+          <h3 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+            <i class="fa-solid fa-file-shield text-emerald-600"></i>
+            ১. রসিদ ও লিখিত প্রমাণ দাবি করুন
+          </h3>
+          <p class="text-slate-600">
+            যেকোনো ফি প্রদানের সময় অফিসিয়াল সিল ও চালান রসিদ দাবি করুন। মৌখিক কোনো লেনদেন করবেন না। সিটিজেন চার্টারে নির্ধারিত ফির বাইরে কোনো ফি দেওয়া সম্পূর্ণ বেআইনি।
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5 shadow-2xs">
+          <h3 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+            <i class="fa-solid fa-user-secret text-rose-600"></i>
+            ২. দালাল চক্রের প্রলোভন বর্জন করুন
+          </h3>
+          <p class="text-slate-600">
+            পাসপোর্ট বা বিআরটিএ-এর বাইরে থাকা কোনো মধ্যস্বত্বভোগীর হাতে ফাইল দেবেন না। সরকারি সেবার সকল আবেদন এখন অনলাইনে সরাসরি নাগরিক প্রোফাইল থেকেই জমা দেওয়া সম্ভব।
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5 shadow-2xs">
+          <h3 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+            <i class="fa-solid fa-scale-balanced text-teal-600"></i>
+            ৩. তথ্য অধিকার আইন ২০০৯
+          </h3>
+          <p class="text-slate-600">
+            আপনার ফাইল কোনো সুস্পষ্ট কারণ ছাড়া আটকে রাখলে তথ্য অধিকার আইনে নির্দিষ্ট কর্মকর্তার নিকট আবেদন আটকে থাকার কারণ ও নোটশিট জানতে চেয়ে লিখিত আবেদন পেশ করুন।
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. COMPREHENSIVE MODAL: REPORT GRIEVANCE ("অভিযোগ জমা দিন") -->
+  <!-- ========================================================================= -->
+  <div id="report-modal" class="fixed inset-0 z-50 hidden bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-5 sm:p-7 border border-slate-200 shadow-xl space-y-5 max-h-[92vh] overflow-y-auto my-4 relative animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Close Button -->
+      <button id="close-report-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-lg w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors" aria-label="বন্ধ করুন">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="space-y-1 pr-6">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-rose-600"></span>
+          <h3 class="text-lg sm:text-xl font-bold tracking-tight text-slate-900">
+            নাগরিক অভিযোগ ও ভোগান্তি জমা দিন
+          </h3>
+        </div>
+        <p class="text-xs text-slate-500">
+          আপনার অভিজ্ঞতা অন্য নাগরিককে সচেতন করবে। পরিচয় প্রকাশ করা ঐচ্ছিক।
+        </p>
+      </div>
+
+      <!-- Real-time Legal Warning Box inside form -->
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 space-y-1 text-xs text-amber-900">
+        <div class="flex items-center gap-1.5 font-bold">
+          <i class="fa-solid fa-triangle-exclamation text-amber-600 text-sm"></i>
+          <span>আইনি সুরক্ষা ও দায়িত্বশীলতার নির্দেশনা:</span>
+        </div>
+        <p class="leading-relaxed">
+          আইনি সুরক্ষার জন্য কোনো ব্যক্তির সরাসরি নাম উল্লেখ করবেন না, শুধুমাত্র পদবি বা কাউন্টার নম্বর উল্লেখ করুন (যেমন: "৩ নং কাউন্টারের কর্মকর্তা" বা "সংশ্লিষ্ট পরিদর্শক")।
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form id="grievance-form" class="space-y-3.5">
+        
+        <!-- Category & Location Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          
+          <div>
+            <label for="form-category" class="block text-xs font-semibold text-slate-700 mb-1">
+              সেবার ধরন / ক্যাটাগরি <span class="text-rose-500">*</span>
+            </label>
+            <select id="form-category" required class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-600">
+              <option value="" disabled selected>ক্যাটাগরি নির্বাচন করুন...</option>
+              <option value="passport">🛂 পাসপোর্ট অফিস সংক্রান্ত</option>
+              <option value="brta">🚗 বিআরটিএ ও ড্রাইভিং লাইসেন্স</option>
+              <option value="nid">🪪 জাতীয় পরিচয়পত্র (NID) সংশোধন</option>
+              <option value="land">📜 ভূমি, নামজারি ও সাব-রেজিস্ট্রি</option>
+              <option value="hospital">🏥 সরকারি হাসপাতাল ও স্বাস্থ্যসেবা</option>
+              <option value="roads">🚧 রাস্তাঘাট, সেতু ও ড্রেনেজ</option>
+              <option value="citycorp">🏛️ সিটি কর্পোরেশন ও ট্রেড লাইসেন্স</option>
+              <option value="utility">⚡ বিদ্যুৎ, গ্যাস ও পানি সরবরাহ</option>
+              <option value="other">📢 অন্যান্য নাগরিক ভোগান্তি</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="form-location" class="block text-xs font-semibold text-slate-700 mb-1">
+              স্থান / অফিস / এলাকা <span class="text-rose-500">*</span>
+            </label>
+            <input type="text" id="form-location" required placeholder="উদাঃ আগারগাঁও পাসপোর্ট অফিস / মিরপুর বিআরটিএ" class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-600 placeholder:text-slate-400" />
+          </div>
+
+        </div>
+
+        <!-- Title -->
+        <div>
+          <label for="form-title" class="block text-xs font-semibold text-slate-700 mb-1">
+            সমস্যার সংক্ষিপ্ত শিরোনাম <span class="text-rose-500">*</span>
+          </label>
+          <input type="text" id="form-title" required placeholder="উদাঃ পুলিশ ভেরিফিকেশনের নামে ২,০০০ টাকা দাবি ও ফাইল ঝুলিয়ে রাখা" class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-600 placeholder:text-slate-400" />
+        </div>
+
+        <!-- Description -->
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <label for="form-description" class="block text-xs font-semibold text-slate-700">
+              বিস্তারিত বিবরণ <span class="text-rose-500">*</span>
+            </label>
+            <span id="char-counter" class="text-[11px] text-slate-400 font-mono-nums">০/১০০০</span>
+          </div>
+          <textarea id="form-description" rows="4" required maxlength="1000" placeholder="ঘটনাটি কীভাবে ঘটেছে, কতদিন ধরে ঘুরছেন এবং কী ধরনের অজুহাত দেওয়া হয়েছে বিস্তারিত লিখুন..." class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl p-3 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-600 placeholder:text-slate-400 leading-relaxed"></textarea>
+        </div>
+
+        <!-- Bribe Extortion Radio Toggle -->
+        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-2.5">
+          <label class="block text-xs font-semibold text-slate-700">
+            অতিরিক্ত টাকা বা ঘুষ দাবি করা হয়েছিল কি না? <span class="text-rose-500">*</span>
+          </label>
+          
+          <div class="flex items-center gap-5 text-xs sm:text-sm">
+            <label class="inline-flex items-center gap-2 cursor-pointer font-medium text-slate-700">
+              <input type="radio" name="bribe-radio" value="yes" id="bribe-yes" class="text-rose-600 focus:ring-rose-600" />
+              <span>হ্যাঁ, অতিরিক্ত অর্থ দাবি করা হয়েছে</span>
+            </label>
+            <label class="inline-flex items-center gap-2 cursor-pointer font-medium text-slate-700">
+              <input type="radio" name="bribe-radio" value="no" id="bribe-no" checked class="text-rose-600 focus:ring-rose-600" />
+              <span>না / প্রযোজ্য নয়</span>
+            </label>
+          </div>
+
+          <!-- Conditional Bribe Amount Input -->
+          <div id="bribe-amount-container" class="hidden pt-1">
+            <label for="form-bribe-amount" class="block text-[11px] font-semibold text-slate-600 mb-1">
+              দাবিকৃত অতিরিক্ত অর্থ বা ঘুষের পরিমাণ (টাকা):
+            </label>
+            <div class="relative max-w-xs">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-mono text-sm">৳</span>
+              <input type="number" id="form-bribe-amount" min="1" placeholder="উদাঃ ২৫০০" class="w-full pl-7 pr-3 py-1.5 text-xs sm:text-sm bg-white border border-slate-300 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-rose-600 font-mono-nums" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Status & Anonymous Toggle Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          
+          <div>
+            <label for="form-status" class="block text-xs font-semibold text-slate-700 mb-1">
+              বর্তমান অবস্থা / স্ট্যাটাস <span class="text-rose-500">*</span>
+            </label>
+            <select id="form-status" required class="w-full text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-600">
+              <option value="pending">⏳ এখনো আটকে আছে / সুরাহা হয়নি</option>
+              <option value="solution_found">💡 সমাধানের উপায় পেয়েছি / পরামর্শ দরকার</option>
+              <option value="resolved">✅ সমাধান হয়েছে (অভিজ্ঞতা শেয়ার)</option>
+            </select>
+          </div>
+
+          <div class="flex items-center pt-1 sm:pt-6">
+            <label class="flex items-center gap-2 cursor-pointer text-xs sm:text-sm text-slate-700">
+              <input type="checkbox" id="form-anonymous" checked class="w-4 h-4 rounded text-rose-600 focus:ring-rose-600" />
+              <span class="font-medium">নিজের পরিচয় সম্পূর্ণ গোপন রাখুন (অ্যানোনিমাস)</span>
+            </label>
+          </div>
+
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center justify-end gap-2.5 pt-3 border-t border-slate-200">
+          <button type="button" id="cancel-report-btn" class="px-4 py-2 text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors">
+            বাতিল
+          </button>
+          <button type="submit" id="submit-report-btn" class="px-5 py-2 text-xs sm:text-sm font-semibold text-white bg-rose-600 hover:bg-rose-700 rounded-xl shadow-xs hover:shadow transition-all flex items-center gap-1.5">
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+            <span>অভিযোগ প্রকাশ করুন</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 6. "AI নাগরিক পরামর্শক" (AI CITIZEN ADVISOR MODAL / DRAWER) -->
+  <!-- ========================================================================= -->
+  <div id="advisor-modal" class="fixed inset-0 z-50 hidden bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-3xl w-full p-5 sm:p-7 border border-slate-200 shadow-xl space-y-5 max-h-[92vh] overflow-y-auto my-4 relative animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Close Button -->
+      <button id="close-advisor-btn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-lg w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors" aria-label="বন্ধ করুন">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Advisor Header -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-teal-600 flex items-center justify-center text-xl shrink-0">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold tracking-tight text-slate-900">
+            AI নাগরিক পরামর্শক (Smart Citizen Advisor)
+          </h3>
+          <p class="text-xs text-slate-500">
+            আইন ও সরকারি বিধিমালা মেনে ঘুষ ছাড়া সেবা পাওয়ার প্রমাণিত কৌশল ও আইনি প্রতিকার।
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Issue Presets Selector -->
+      <div class="space-y-2">
+        <label class="block text-xs font-semibold text-slate-700">
+          প্রচলিত নাগরিক ভোগান্তির সমাধান নির্বাচন করুন:
+        </label>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="advisor-presets-container">
+          <button data-preset="passport" class="preset-btn text-left p-2.5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 transition-all flex items-center justify-between">
+            <span class="font-medium text-slate-800">🛂 পুলিশ ভেরিফিকেশনে টাকা চাচ্ছে, কী করব?</span>
+            <i class="fa-solid fa-chevron-right text-slate-400 text-[10px]"></i>
+          </button>
+          <button data-preset="brta" class="preset-btn text-left p-2.5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 transition-all flex items-center justify-between">
+            <span class="font-medium text-slate-800">🚗 ড্রাইভিং লাইসেন্স আটকে রেখেছে ও বিআরটিএ দালাল</span>
+            <i class="fa-solid fa-chevron-right text-slate-400 text-[10px]"></i>
+          </button>
+          <button data-preset="nid" class="preset-btn text-left p-2.5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 transition-all flex items-center justify-between">
+            <span class="font-medium text-slate-800">🪪 NID সংশোধন ও জন্মতারিখ জটিলতায় মাসের পর মাস</span>
+            <i class="fa-solid fa-chevron-right text-slate-400 text-[10px]"></i>
+          </button>
+          <button data-preset="land" class="preset-btn text-left p-2.5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 transition-all flex items-center justify-between">
+            <span class="font-medium text-slate-800">📜 নামজারি খতিয়ানে সার্ভেয়ার বা এসিল্যান্ড ঘুষ দাবি</span>
+            <i class="fa-solid fa-chevron-right text-slate-400 text-[10px]"></i>
+          </button>
+          <button data-preset="hospital" class="preset-btn text-left p-2.5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 transition-all flex items-center justify-between">
+            <span class="font-medium text-slate-800">🏥 সরকারি হাসপাতালে বিনামূল্যে ওষুধ না দিয়ে বাইরে পাঠালে</span>
+            <i class="fa-solid fa-chevron-right text-slate-400 text-[10px]"></i>
+          </button>
+          <button data-preset="extortion" class="preset-btn text-left p-2.5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 transition-all flex items-center justify-between">
+            <span class="font-medium text-slate-800">🛑 পৌরসভা বা সড়কে অবৈধ চাঁদা বা সিন্ডিকেট হয়রানি</span>
+            <i class="fa-solid fa-chevron-right text-slate-400 text-[10px]"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Advisor Response Card (Light Style) -->
+      <div id="advisor-result-card" class="bg-teal-50/70 border border-teal-200 rounded-2xl p-4 sm:p-5 space-y-3">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 7. FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-slate-200 bg-white py-6 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-slate-800">নাগরিক ভোগান্তি</span>
+        <span>·</span>
+        <span>নাগরিক সচেতনতা ও জবাবদিহিতা নিশ্চিতকরণে স্বেচ্ছাসেবী উন্মুক্ত পোর্টাল</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#feed-section" class="hover:text-rose-600 transition-colors">অভিযোগসমূহ</a>
+        <a href="#guidelines-section" class="hover:text-rose-600 transition-colors">আইনি অধিকার</a>
+        <button id="reset-storage-btn" class="hover:text-rose-600 transition-colors text-[11px] underline">ডেমো ডেটা রিসেট</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 8. JAVASCRIPT LOGIC & STATE PERSISTENCE -->
+  <!-- ========================================================================= -->
+  <script>
+    /**
+     * নাগরিক ভোগান্তি (Citizen Voice)
+     * Pure Light Theme SPA with Ultra-Smooth Mobile Navigation
+     */
+
+    // 5 Realistic Bengali Seed Grievances
+    const SEED_GRIEVANCES = [
+      {
+        id: "GRV-101",
+        title: "আগারগাঁও পাসপোর্ট অফিসে পুলিশ ভেরিফিকেশনের নামে অতিরিক্ত টাকা দাবি",
+        category: "passport",
+        categoryName: "পাসপোর্ট অফিস",
+        location: "আগারগাঁও বিভাগীয় পাসপোর্ট অফিস ও স্থানীয় থানা",
+        description: "জরুরি ফি দিয়ে ই-পাসপোর্টের আবেদন করেছিলাম। সব কাগজপত্র শতভাগ সঠিক থাকা সত্ত্বেও এসবি (SB) ভেরিফিকেশনের জন্য বিশেষ শাখার কর্মকর্তা সরাসরি কল করে চা-মিষ্টি খাওয়ার নাম করে ৩,০০০ টাকা দাবি করেন। টাকা না দিলে নেগেটিভ রিপোর্ট দেওয়ার হুমকি দেওয়া হয়। আমি পরে ঊর্ধ্বতন কর্মকর্তার সাথে দেখা করে লিখিত অবহিত করায় সমাধান পাই।",
+        bribeDemanded: true,
+        bribeAmount: 3000,
+        status: "resolved",
+        statusText: "সমাধান হয়েছে",
+        author: "বেনামী নাগরিক",
+        timestamp: "২ ঘণ্টা আগে",
+        createdAt: Date.now() - (2 * 3600 * 1000),
+        upvotes: 84,
+        hasUpvoted: false,
+        comments: [
+          { author: "সচেতন নাগরিক", text: "পুলিশ ভেরিফিকেশনে টাকা চাওয়া সম্পূর্ণ অবৈধ। ঊর্ধ্বতন এসপি অথবা ডিএমপি হেডকোয়ার্টারে অভিযোগ দিলে সঙ্গে সঙ্গে ঠিক হয়ে যায়।", time: "১ ঘণ্টা আগে" },
+          { author: "ভুক্তভোগী ভাই", text: "আমার কাছেও ১৫০০ চেয়েছিল। আমি স্পষ্ট বলেছি রসিদ ছাড়া এক টাকাও দেব না। পরে বিনা পয়সায় সাইন করেছে।", time: "৩০ মিনিট আগে" }
+        ]
+      },
+      {
+        id: "GRV-102",
+        title: "মিরপুর বিআরটিএ-তে প্রফেশনাল ড্রাইভিং টেস্ট স্লট আটকে রাখা ও দালাল সিন্ডিকেট",
+        category: "brta",
+        categoryName: "বিআরটিএ",
+        location: "মিরপুর ১২ বিআরটিএ কার্যালয়, ঢাকা",
+        description: "লার্নার কার্ডের মেয়াদ শেষ হয়ে আসছে কিন্তু অনলাইন পোর্টালে ড্রাইভিং টেস্টের কোনো স্লট খালি দেখায় না। অথচ অফিসের গেটের বাইরে দাঁড়ালেই দালালরা এসে বলে ৫,০০০ টাকা দিলে আগামী সপ্তাহের যেকোনো দিনে প্র্যাকটিক্যাল টেস্ট ও ফিঙ্গারপ্রিন্ট কনফার্ম করিয়ে দেবে। সাধারণ মানুষের মাসের পর মাস নষ্ট হচ্ছে।",
+        bribeDemanded: true,
+        bribeAmount: 5000,
+        status: "pending",
+        statusText: "এখনো আটকে আছে",
+        author: "বেনামী নাগরিক",
+        timestamp: "৫ ঘণ্টা আগে",
+        createdAt: Date.now() - (5 * 3600 * 1000),
+        upvotes: 112,
+        hasUpvoted: false,
+        comments: [
+          { author: "অটোমোবাইল ট্রেইনার", text: "বিআরটিএ চেয়ারম্যান বরাবর অনলাইনে সরাসরি অভিযোগ জানান। প্রতি সপ্তাহে নির্দিষ্ট সময়ে কেন্দ্রীয় সার্ভারে স্লট ছাড়ে।", time: "৩ ঘণ্টা আগে" }
+        ]
+      },
+      {
+        id: "GRV-103",
+        title: "জাতীয় পরিচয়পত্র (NID) জন্মতারিখ সংশোধনে ১ বছর ধরে শুনানির নামে ঘোরানো",
+        category: "nid",
+        categoryName: "জাতীয় পরিচয়পত্র",
+        location: "নির্বাচন কমিশন ভবন ও উপজেলা নির্বাচন অফিস",
+        description: "এসএসসি সনদ ও অনলাইন জন্মনিবন্ধন সনদ দিয়ে 'গ' ক্যাটাগরির সংশোধনের আবেদন করেছিলাম এক বছর আগে। অনলাইনে স্ট্যাটাস 'তদন্তাধীন' দেখায়। অফিসে গেলে বলে ঢাকা হেডকোয়ার্টারে ফাইল গেছে। সেখানে গেলে বলে আঞ্চলিক অফিসে যান। কোনো কারণ ছাড়া সাধারণ নাগরিকদের এভাবে ঘোরানো হচ্ছে।",
+        bribeDemanded: false,
+        bribeAmount: 0,
+        status: "solution_found",
+        statusText: "পরামর্শ দরকার",
+        author: "বেনামী নাগরিক",
+        timestamp: "১ দিন আগে",
+        createdAt: Date.now() - (24 * 3600 * 1000),
+        upvotes: 67,
+        hasUpvoted: false,
+        comments: [
+          { author: "আইনজীবী", text: "১০৫ নম্বরে কল করে কমপ্লেইন টিকিট ওপেন করুন। তারপর নির্বাচন কমিশনের ওয়েবসাইটে অভিযোগ প্রতিকার কর্মকর্তা (GRS)-এ আবেদন করুন।", time: "১৮ ঘণ্টা আগে" }
+        ]
+      },
+      {
+        id: "GRV-104",
+        title: "তেজগাঁও ভূমি অফিসে নামজারির বৈধ আবেদন বাতিল করার ভয় দেখিয়ে উৎকোচ দাবি",
+        category: "land",
+        categoryName: "ভূমি ও রেজিস্ট্রি",
+        location: "সহকারী কমিশনার (ভূমি) সার্কেল অফিস, তেজগাঁও",
+        description: "পৈত্রিক সূত্রে প্রাপ্ত ফ্ল্যাটের নামজারি করতে গেলে সার্ভেয়ার রিপোর্টে ইচ্ছাকৃতভাবে 'কাগজে অস্পষ্টতা রয়েছে' লিখে ফাইল আটকে রাখে। পরে নির্দিষ্ট একজন আইনজীবীর মাধ্যমে দেখা করতে বলে এবং প্রতি খতিয়ানে ১০,০০০ টাকা দাবি করে। আমি ভূমি মন্ত্রণালয়ের ১৬১২২ নম্বরে তাৎক্ষণিক অভিযোগ দিয়েছি।",
+        bribeDemanded: true,
+        bribeAmount: 10000,
+        status: "solution_found",
+        statusText: "সমাধানের উপায় পেয়েছি",
+        author: "বেনামী নাগরিক",
+        timestamp: "২ দিন আগে",
+        createdAt: Date.now() - (48 * 3600 * 1000),
+        upvotes: 95,
+        hasUpvoted: false,
+        comments: [
+          { author: "ভূমি বিশেষজ্ঞ", text: "১৬১২২ নম্বরে কল দিলে এসিল্যান্ডরা জবাবদিহিতা করতে বাধ্য থাকে। অনলাইনে আবেদনের পর কোনো অতিরিক্ত ফি দেবেন না।", time: "১ দিন আগে" }
+        ]
+      },
+      {
+        id: "GRV-105",
+        title: "কুড়িল-বাড্ডা লিংক রোডের প্রধান কালভার্ট ও ড্রেনেজ ভাঙা থাকায় দীর্ঘ যানজট",
+        category: "roads",
+        categoryName: "রাস্তাঘাট ও ড্রেনেজ",
+        location: "কুড়িল বিশ্বরোড সংযোগ, ঢাকা",
+        description: "গত চার মাস ধরে কালভার্টের একাংশ ভেঙে ম্যানহোল খোলা অবস্থায় রয়েছে। হালকা বৃষ্টি হলেই হাঁটু পানি জমে থাকে এবং প্রতিদিন শত শত অফিসগামী মানুষ ২ ঘণ্টা যানজটে আটকে থাকে। সংশ্লিষ্ট সিটি কর্পোরেশন ও ওয়াসা পরস্পরকে দোষারোপ করে কাজ ঝুলিয়ে রেখেছে।",
+        bribeDemanded: false,
+        bribeAmount: 0,
+        status: "pending",
+        statusText: "এখনো আটকে আছে",
+        author: "বেনামী নাগরিক",
+        timestamp: "৩ দিন আগে",
+        createdAt: Date.now() - (72 * 3600 * 1000),
+        upvotes: 143,
+        hasUpvoted: false,
+        comments: [
+          { author: "এলাকাবাসী", text: "স্থানীয় ওয়ার্ড কাউন্সিলর অফিসে স্মারকলিপি জমা দেওয়া হয়েছে। সবাই ৩৩৩ নম্বরে অভিযোগ দিলে দ্রুত ব্যবস্থা নেবে।", time: "২ দিন আগে" }
+        ]
+      }
+    ];
+
+    // Verified AI Advisor Solution Database
+    const ADVISOR_KNOWLEDGE = {
+      passport: {
+        title: "পাসপোর্টে পুলিশ ভেরিফিকেশন ও দালাল হয়রানি এড়ানোর আইনি উপায়",
+        category: "পাসপোর্ট ও ইমিগ্রেশন",
+        steps: [
+          "১. পাসপোর্ট আইন অনুযায়ী পুলিশ ভেরিফিকেশনের জন্য কোনো প্রকার সরকারি বা ব্যক্তিগত ফি প্রযোজ্য নয়। সকল ফি ব্যাংকে আগেই জমা দেওয়া হয়েছে।",
+          "২. তদন্তকারী পুলিশ কর্মকর্তা এলে আপনার জাতীয় পরিচয়পত্র, জন্মনিবন্ধন, স্থায়ী ঠিকানার বিদ্যুৎ বিল বা নাগরিক সনদের সত্যায়িত কপি প্রদর্শন করুন।",
+          "৩. যদি কর্মকর্তা অনৈতিকভাবে টাকা দাবি করেন বা নেগেটিভ রিপোর্টের ভয় দেখান, তবে তাৎক্ষণিকভাবে বিষয়টি সংশ্লিষ্ট জেলার পুলিশ সুপার (SP) অথবা মেট্রোপলিটনের উপ-পুলিশ কমিশনার (DC-SB) এর কার্যালয়ে লিখিতভাবে বা সরাসরি জানান।",
+          "৪. ই-পাসপোর্ট পোর্টালে অনলাইন স্ট্যাটাস নিয়মিত ট্র্যাক করুন। কোনো কারণ ছাড়া 'Pending for Police Verification' ১৫ দিনের বেশি থাকলে ৩৩৩ নম্বরে অভিযোগ করুন।"
+        ],
+        hotlines: ["৩৩৩ (সরকারি সেবা)", "১০৬ (দুদক হটলাইন)"],
+        lawNote: "জনস্বার্থ তথ্য প্রকাশ সুরক্ষা আইন ২০১১ অনুযায়ী হয়রানির তথ্য প্রকাশে নাগরিকের পূর্ণ আইনি অধিকার রয়েছে।"
+      },
+      brta: {
+        title: "বিআরটিএ ড্রাইভিং লাইসেন্স ও টেস্ট স্লট সিন্ডিকেট মোকাবিলার উপায়",
+        category: "বিআরটিএ ও পরিবহন",
+        steps: [
+          "১. কোনো দালালের প্রলোভনে পড়বেন না। বিআরটিএ-এর BSP (bsp.brta.gov.bd) পোর্টাল থেকে নিজেই ইউজার তৈরি করে আবেদন করুন।",
+          "২. স্লট না পেলে প্রতি শনিবার বা রবিবার সকালে সেন্ট্রাল সার্ভার রিফ্রেশ হওয়ার সময়ে দ্রুত টেস্টের তারিখ বুক করার চেষ্টা করুন।",
+          "৩. টেস্ট দেওয়ার পর ফলাফল পাস হলে সিস্টেম থেকে অটোমেটিক এপ্রুভাল দেওয়া বাধ্যতামূলক। অফিসার যদি ফিঙ্গারপ্রিন্ট আটকে রাখে, সাথে সাথে বিআরটিএ সার্কেলের উপ-পরিচালক (ইঞ্জিনিয়ারিং) এর রুমে গিয়ে আপত্তি জানান।",
+          "৪. ঘুষ দাবি করলে বিআরটিএ ভিজিলেন্স টিম বা বিআরটিএ প্রধান কার্যালয়ের হেল্পলাইনে অভিযোগ পাঠান।"
+        ],
+        hotlines: ["১৬১০৭ (বিআরটিএ হেল্পলাইন)", "১০৬ (দুদক)"],
+        lawNote: "মোটরযান আইন ২০১৮ অনুযায়ী নির্ধারিত ফি ব্যতীত অতিরিক্ত অর্থ আদায় শাস্তিযোগ্য অপরাধ।"
+      },
+      nid: {
+        title: "জাতীয় পরিচয়পত্র (NID) সংশোধন ও আটকে থাকা ফাইল নিষ্পত্তির নিয়ম",
+        category: "নির্বাচন কমিশন ও এনআইডি",
+        steps: [
+          "১. NID সংশোধনের ক্ষেত্রে শিক্ষাগত যোগ্যতার সনদ (SSC/JSC) প্রধান প্রমাণ হিসেবে গণ্য হয়। সনদ না থাকলে ম্যাজিস্ট্রেট কোর্টের এফিডেভিট ও ডিজিটাল জন্মনিবন্ধন যুক্ত করুন।",
+          "২. ক্যাটাগরি 'ক' ও 'খ' উপজেলা ও জেলা পর্যায়ে নিষ্পত্তি হয়। ৩০ দিনের বেশি আটকে থাকলে সরাসরি জেলা নির্বাচন কর্মকর্তার সাথে ব্যক্তিগত শুনানিতে বসুন।",
+          "৩. 'গ' ও 'ঘ' ক্যাটাগরির জন্য নির্বাচন কমিশন সচিবালয়ের এনআইডি উইংয়ের হেল্পলাইন ১০৫ নম্বরে কল করে বর্তমান ফাইলের অবস্থান ও অবজেকশন নোট জেনে নিন।",
+          "৪. কোনো কর্মকর্তা অন্যায্য কালক্ষেপণ করলে বাংলাদেশ নির্বাচন কমিশনের GRS (grs.gov.bd) পোর্টালে সরাসরি অভিযোগ দাখিল করুন।"
+        ],
+        hotlines: ["১০৫ (এনআইডি কল সেন্টার)", "৩৩৩ (জাতীয় হেল্পলাইন)"],
+        lawNote: "জাতীয় পরিচয় নিবন্ধন আইন অনুযায়ী তথ্য সংশোধনে অপ্রয়োজনীয় বিলম্ব করা সরকারি কর্মচারী আচরণ বিধিমালার পরিপন্থী।"
+      },
+      land: {
+        title: "ভূমি অফিসে নামজারি (মিউটেশন) ও অতিরিক্ত ফি দাবি প্রতিরোধ",
+        category: "ভূমি মন্ত্রণালয় ও এসিল্যান্ড অফিস",
+        steps: [
+          "১. নামজারির সরকারি সর্বমোট ফি নির্ধারিত ১,১৭০ টাকা (আবেদন ফি ২০ + নোটিশ জারি ৫০ + রেকর্ড সংশোধন ১০০০ + খতিয়ান ফি ১০০)। এর অতিরিক্ত ১ টাকাও সরকারি নয়।",
+          "২. ভূমি মন্ত্রণালয়ের ই-নামজারি (mutation.land.gov.bd) পোর্টালের বাইরে কোনো অফলাইন কাগজ লেনদেন করবেন না।",
+          "৩. ২৮ কার্যদিবসের মধ্যে নামজারি নিষ্পত্তি করার সরকারি বাধ্যবাধকতা রয়েছে। সার্ভেয়ার বা অফিস সহকারী ঘুষ চাইলে সাথে সাথে ১৬১২২ নম্বরে কল করে লাইভ অভিযোগ রেকর্ড করান।",
+          "৪. ১৬১২২-এ অভিযোগ করলে মন্ত্রণালয় সরাসরি এসিল্যান্ডকে জবাবদিহিতার আওতায় আনে।"
+        ],
+        hotlines: ["১৬১২২ (ভূমি সেবা ২৪ ঘণ্টা)", "১০৬ (দুদক)"],
+        lawNote: "ভূমি মন্ত্রণালয়ের সিটিজেন চার্টার অনুযায়ী নির্ধারিত সময়ে সেবা না দেওয়া অসদাচরণ হিসেবে গণ্য।"
+      },
+      hospital: {
+        title: "সরকারি হাসপাতালে ওষুধ ও টেস্টের অনিয়ম প্রতিরোধের উপায়",
+        category: "স্বাস্থ্য অধিদপ্তর ও সরকারি হাসপাতাল",
+        steps: [
+          "১. সরকারি হাসপাতালে সরবরাহকৃত সকল ওষুধ বিনামূল্যে পাওয়ার অধিকার রোগীর রয়েছে। ফার্মেসির দেয়ালে টানানো 'মজুদ ওষুধের তালিকা' দেখে নিন।",
+          "২. ডাক্তার বা নার্স ইচ্ছাকৃতভাবে বাইরের নির্দিষ্ট ফার্মেসি বা ডায়াগনস্টিক সেন্টারে পাঠালে হাসপাতালের তত্ত্বাবধায়ক (Superintendent) বা আরএমও (RMO)-কে জানান।",
+          "৩. জরুরি বিভাগে টিকিট ফি ব্যতিরেকে অতিরিক্ত ফি চাইলে টিকিট কাউন্টারের রসিদ দাবি করুন।",
+          "৪. কোনো রোগীর জীবন সংকটাপন্ন হলে এবং চিকিৎসায় অবহেলা দেখা দিলে স্থানীয় স্বাস্থ্য অধিকার কমিটি ও স্বাস্থ্য অধিদপ্তরের হটলাইনে অবহিত করুন।"
+        ],
+        hotlines: ["১৬২৬৩ (স্বাস্থ্য বাতায়ন)", "৩৩৩ (সরকারি সেবা)"],
+        lawNote: "সংবিধানের ১৮(১) অনুচ্ছেদ অনুযায়ী স্বাস্থ্যসেবা নিশ্চিত করা রাষ্ট্রের অন্যতম মৌলিক দায়িত্ব।"
+      },
+      extortion: {
+        title: "সড়কে অবৈধ চাঁদা ও স্থানীয় সিন্ডিকেট প্রতিরোধ",
+        category: "পৌরসভা ও আইনশৃঙ্খলা",
+        steps: [
+          "১. পৌরসভা বা সিটি কর্পোরেশনের টোল আদায়ের ক্ষেত্রে নির্দিষ্ট সাইনবোর্ড ও সরকারি অনুমোদিত রেটচার্ট থাকতে হবে। রসিদ ছাড়া কোনো চাঁদা দেবেন না।",
+          "২. পরিবহন শ্রমিক বা পণ্যবাহী গাড়িতে চাঁদা চাইলে নিকটস্থ হাইওয়ে পুলিশ ফাঁড়ি অথবা ৯৯৯ নম্বরে তাৎক্ষণিক কল দিয়ে লোকেশন জানান।",
+          "৩. এলাকায় কোনো সিন্ডিকেট ব্যবসা পরিচালনায় বাধা দিলে ভোক্তা অধিকার সংরক্ষণ অধিদপ্তর এবং জেলা প্রশাসকের ভ্রাম্যমাণ আদালতের দৃষ্টি আকর্ষণ করুন।"
+        ],
+        hotlines: ["৯৯৯ (জাতীয় জরুরি সেবা)", "১৬১২১ (ভোক্তা অধিকার)"],
+        lawNote: "দণ্ডবিধি ৩৮৪ ধারা অনুযায়ী জোরপূর্বক অর্থ আদায় (Extortion) একটি অজামিনযোগ্য ফৌজদারি অপরাধ।"
+      }
+    };
+
+    // State Store
+    const AppState = {
+      grievances: [],
+      currentCategory: 'all',
+      searchQuery: '',
+      currentSort: 'newest',
+      soundEnabled: true
+    };
+
+    // Micro Sound Audio Synthesizer (Web Audio API)
+    const AudioEngine = {
+      ctx: null,
+      init() {
+        if (!this.ctx && (window.AudioContext || window.webkitAudioContext)) {
+          this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+      },
+      playPop() {
+        if (!AppState.soundEnabled) return;
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(520, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(820, this.ctx.currentTime + 0.08);
+          gain.gain.setValueAtTime(0.12, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.08);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.08);
+        } catch (e) {}
+      },
+      playSuccess() {
+        if (!AppState.soundEnabled) return;
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const now = this.ctx.currentTime;
+          const osc1 = this.ctx.createOscillator();
+          const osc2 = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc1.frequency.setValueAtTime(523.25, now);
+          osc2.frequency.setValueAtTime(659.25, now + 0.08);
+          gain.gain.setValueAtTime(0.14, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+          osc1.connect(gain);
+          osc2.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc1.start(now);
+          osc1.stop(now + 0.08);
+          osc2.start(now + 0.08);
+          osc2.stop(now + 0.25);
+        } catch (e) {}
+      }
+    };
+
+    // Number translation to Bengali
+    function toBengaliNumber(num) {
+      if (num === null || num === undefined) return '০';
+      const bengaliDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+      return String(num).replace(/[0-9]/g, d => bengaliDigits[Number(d)]);
+    }
+
+    function formatTaka(amount) {
+      if (!amount) return '৳০';
+      const formatted = Number(amount).toLocaleString('en-US');
+      return '৳' + toBengaliNumber(formatted);
+    }
+
+    // Live Bengali Clock
+    function startBengaliClock() {
+      const clockEl = document.getElementById('bengali-live-clock');
+      const mobileClockEl = document.getElementById('bengali-live-clock-mobile');
+      const bDays = ['রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার'];
+      const bMonths = ['জানুয়ারি', 'ফেব্রুয়ারি', 'মার্চ', 'এপ্রিল', 'মে', 'জুন', 'জুলাই', 'আগস্ট', 'সেপ্টেম্বর', 'অক্টোবর', 'নভেম্বর', 'ডিসেম্বর'];
+
+      function update() {
+        const now = new Date();
+        const day = bDays[now.getDay()];
+        const dateNum = toBengaliNumber(now.getDate());
+        const month = bMonths[now.getMonth()];
+        const year = toBengaliNumber(now.getFullYear());
+        
+        let hours = now.getHours();
+        const mins = toBengaliNumber(String(now.getMinutes()).padStart(2, '0'));
+        const secs = toBengaliNumber(String(now.getSeconds()).padStart(2, '0'));
+        const ampm = hours >= 12 ? 'অপরাহ্ন' : 'পূর্বাহ্ন';
+        hours = hours % 12 || 12;
+        const bHours = toBengaliNumber(String(hours).padStart(2, '0'));
+
+        const str = `${day}, ${dateNum} ${month} ${year} · ${bHours}:${mins}:${secs} ${ampm}`;
+        if (clockEl) clockEl.textContent = str;
+        if (mobileClockEl) mobileClockEl.textContent = str;
+      }
+
+      update();
+      setInterval(update, 1000);
+    }
+
+    // Toast Notification System
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const isSuccess = type === 'success';
+      
+      toast.className = `pointer-events-auto px-4 py-3 rounded-xl shadow-lg border text-xs font-semibold flex items-center gap-2.5 transition-all transform translate-y-3 opacity-0 ${
+        isSuccess
+          ? 'bg-slate-900 text-white border-slate-700'
+          : 'bg-rose-900 text-white border-rose-700'
+      }`;
+      toast.innerHTML = `
+        <i class="fa-solid ${isSuccess ? 'fa-circle-check text-emerald-400' : 'fa-triangle-exclamation text-rose-400'} text-base"></i>
+        <span>${message}</span>
+      `;
+
+      container.appendChild(toast);
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-3', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 250);
+      }, 3500);
+    }
+
+    // LocalStorage Initialization
+    function initStorage() {
+      try {
+        const stored = localStorage.getItem('nagorik_bhoganti_v1');
+        if (stored) {
+          AppState.grievances = JSON.parse(stored);
+        } else {
+          AppState.grievances = [...SEED_GRIEVANCES];
+          saveStorage();
+        }
+      } catch (e) {
+        AppState.grievances = [...SEED_GRIEVANCES];
+      }
+    }
+
+    function saveStorage() {
+      try {
+        localStorage.setItem('nagorik_bhoganti_v1', JSON.stringify(AppState.grievances));
+      } catch (e) {
+        console.warn('Storage save failed', e);
+      }
+    }
+
+    function updateMetrics() {
+      const total = AppState.grievances.length;
+      const resolved = AppState.grievances.filter(g => g.status === 'resolved').length;
+      const totalBribe = AppState.grievances.reduce((acc, g) => acc + (g.bribeDemanded && g.bribeAmount ? Number(g.bribeAmount) : 0), 0);
+
+      document.getElementById('stat-total-complaints').textContent = toBengaliNumber(total);
+      document.getElementById('stat-resolved-complaints').textContent = toBengaliNumber(resolved);
+      document.getElementById('stat-total-bribe').textContent = formatTaka(totalBribe);
+    }
+
+    // Category styling & subtle light badge colors
+    const CATEGORY_MAP = {
+      passport: { name: 'পাসপোর্ট অফিস', color: 'bg-rose-50 text-rose-700 border-rose-200', icon: 'fa-id-card' },
+      brta: { name: 'বিআরটিএ ও লাইসেন্স', color: 'bg-red-50 text-red-700 border-red-200', icon: 'fa-car' },
+      nid: { name: 'জাতীয় পরিচয়পত্র', color: 'bg-blue-50 text-blue-700 border-blue-200', icon: 'fa-address-card' },
+      land: { name: 'ভূমি ও রেজিস্ট্রি', color: 'bg-amber-50 text-amber-700 border-amber-200', icon: 'fa-landmark' },
+      hospital: { name: 'হাসপাতাল ও স্বাস্থ্য', color: 'bg-emerald-50 text-emerald-700 border-emerald-200', icon: 'fa-hospital' },
+      roads: { name: 'রাস্তাঘাট ও ড্রেনেজ', color: 'bg-orange-50 text-orange-700 border-orange-200', icon: 'fa-road' },
+      citycorp: { name: 'সিটি কর্পোরেশন', color: 'bg-purple-50 text-purple-700 border-purple-200', icon: 'fa-city' },
+      utility: { name: 'বিদ্যুৎ ও গ্যাস', color: 'bg-yellow-50 text-yellow-800 border-yellow-200', icon: 'fa-bolt' },
+      other: { name: 'সাধারণ অভিযোগ', color: 'bg-slate-100 text-slate-700 border-slate-200', icon: 'fa-bullhorn' }
+    };
+
+    const STATUS_MAP = {
+      pending: { text: 'এখনো আটকে আছে', badge: 'bg-rose-50 text-rose-700 border-rose-200' },
+      solution_found: { text: 'সমাধানের উপায় পেয়েছি', badge: 'bg-blue-50 text-blue-700 border-blue-200' },
+      resolved: { text: 'সমাধান হয়েছে', badge: 'bg-emerald-50 text-emerald-700 border-emerald-200' }
+    };
+
+    // Render Feed Cards (Light Clean SaaS UI)
+    function renderFeed() {
+      updateMetrics();
+      const grid = document.getElementById('grievances-grid');
+      const emptyState = document.getElementById('empty-feed-state');
+      const countBadge = document.getElementById('feed-count-badge');
+
+      const q = AppState.searchQuery.toLowerCase().trim();
+      let filtered = AppState.grievances.filter(g => {
+        const matchCat = AppState.currentCategory === 'all' || g.category === AppState.currentCategory;
+        const matchQ = !q ||
+          g.title.toLowerCase().includes(q) ||
+          g.location.toLowerCase().includes(q) ||
+          g.description.toLowerCase().includes(q) ||
+          (g.categoryName && g.categoryName.toLowerCase().includes(q));
+        return matchCat && matchQ;
+      });
+
+      // Sorting
+      if (AppState.currentSort === 'newest') {
+        filtered.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+      } else if (AppState.currentSort === 'most_upvoted') {
+        filtered.sort((a, b) => (b.upvotes || 0) - (a.upvotes || 0));
+      } else if (AppState.currentSort === 'highest_bribe') {
+        filtered.sort((a, b) => (b.bribeAmount || 0) - (a.bribeAmount || 0));
+      }
+
+      countBadge.textContent = toBengaliNumber(filtered.length);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = filtered.map(item => {
+        const catInfo = CATEGORY_MAP[item.category] || CATEGORY_MAP.other;
+        const statusInfo = STATUS_MAP[item.status] || STATUS_MAP.pending;
+        const isBribe = item.bribeDemanded && item.bribeAmount > 0;
+        const isLongDesc = item.description.length > 170;
+        const truncatedDesc = isLongDesc ? item.description.slice(0, 170) + '...' : item.description;
+        const commentsCount = (item.comments || []).length;
+
+        return `
+          <article class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 hover:border-slate-300 hover:shadow-md transition-all shadow-xs flex flex-col justify-between space-y-3.5">
+            
+            <div class="space-y-2.5">
+              <!-- Top Category + Status Row -->
+              <div class="flex items-center justify-between gap-2 flex-wrap">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold border ${catInfo.color}">
+                  <i class="fa-solid ${catInfo.icon} text-[10px]"></i>
+                  <span>${item.categoryName || catInfo.name}</span>
+                </span>
+
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium border ${statusInfo.badge}">
+                  <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                  <span>${statusInfo.text}</span>
+                </span>
+              </div>
+
+              <!-- Location Badge -->
+              <div class="flex items-center gap-1.5 text-xs text-slate-500">
+                <i class="fa-solid fa-location-dot text-rose-500 text-xs shrink-0"></i>
+                <span class="font-medium text-slate-700 truncate">${item.location}</span>
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-base font-bold text-slate-900 leading-snug">
+                ${item.title}
+              </h3>
+
+              <!-- Bribe / Extra fee Warning Badge -->
+              ${isBribe ? `
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold font-mono-nums">
+                  <i class="fa-solid fa-triangle-exclamation text-rose-600"></i>
+                  <span>দাবিকৃত অবৈধ অর্থ: ${formatTaka(item.bribeAmount)}</span>
+                </div>
+              ` : ''}
+
+              <!-- Description with Read more toggle -->
+              <div class="text-xs sm:text-sm text-slate-600 leading-relaxed space-y-1">
+                <p id="desc-text-${item.id}">${truncatedDesc}</p>
+                ${isLongDesc ? `
+                  <button onclick="toggleDescription('${item.id}', \`${encodeURIComponent(item.description)}\`, \`${encodeURIComponent(truncatedDesc)}\`)" id="desc-toggle-${item.id}" class="text-rose-600 font-semibold text-xs hover:underline inline-block">
+                    আরও পড়ুন...
+                  </button>
+                ` : ''}
+              </div>
+
+            </div>
+
+            <!-- Bottom Section: Author + Relative Time + Action Bar -->
+            <div class="pt-3 border-t border-slate-100 space-y-2.5">
+              
+              <!-- Author Meta -->
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-5 h-5 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-[10px]">
+                    <i class="fa-solid fa-user-secret"></i>
+                  </div>
+                  <span class="text-slate-600 font-medium">${item.author || 'বেনামী নাগরিক'}</span>
+                </div>
+                <span class="font-mono-nums text-[11px]">${item.timestamp}</span>
+              </div>
+
+              <!-- Interactive Action Bar -->
+              <div class="flex items-center justify-between gap-1.5 pt-1 text-xs">
+                
+                <!-- Me-too Upvote Button -->
+                <button onclick="handleUpvote('${item.id}')" class="px-2.5 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 ${
+                  item.hasUpvoted
+                    ? 'bg-rose-50 text-rose-700 border border-rose-200'
+                    : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                }">
+                  <i class="fa-solid fa-users text-xs ${item.hasUpvoted ? 'text-rose-600' : ''}"></i>
+                  <span>আমিও ভুক্তভোগী</span>
+                  <span class="font-mono-nums ml-0.5 font-bold">${toBengaliNumber(item.upvotes || 0)}</span>
+                </button>
+
+                <!-- Comments / Advice Drawer Button -->
+                <button onclick="toggleCommentDrawer('${item.id}')" class="px-2.5 py-1.5 rounded-lg font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors flex items-center gap-1">
+                  <i class="fa-regular fa-comment-dots text-xs"></i>
+                  <span>পরামর্শ</span>
+                  <span class="font-mono-nums text-[11px] font-bold">(${toBengaliNumber(commentsCount)})</span>
+                </button>
+
+                <!-- Share Button -->
+                <button onclick="handleShare('${item.id}', '${item.title.replace(/'/g, "\\'")}')" class="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors" title="শেয়ার করুন" aria-label="শেয়ার">
+                  <i class="fa-solid fa-share-nodes text-xs"></i>
+                </button>
+
+              </div>
+
+              <!-- Inline Comment / Solution Drawer (Hidden by default) -->
+              <div id="comment-drawer-${item.id}" class="hidden pt-3 border-t border-dashed border-slate-200 space-y-2.5">
+                <div class="text-[11px] font-bold text-slate-700 flex items-center justify-between">
+                  <span>অভিজ্ঞ নাগরিকের পরামর্শ (${toBengaliNumber(commentsCount)})</span>
+                  <button onclick="toggleCommentDrawer('${item.id}')" class="text-slate-400 hover:text-slate-600 text-xs">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </button>
+                </div>
+
+                <!-- Comment List -->
+                <div class="space-y-1.5 max-h-44 overflow-y-auto pr-1 text-xs" id="comment-list-${item.id}">
+                  ${(item.comments && item.comments.length > 0) ? item.comments.map(c => `
+                    <div class="bg-slate-50 p-2 rounded-lg border border-slate-200 space-y-0.5">
+                      <div class="flex items-center justify-between text-[10px] text-slate-400">
+                        <span class="font-bold text-slate-700">${c.author}</span>
+                        <span>${c.time || 'সম্প্রতি'}</span>
+                      </div>
+                      <p class="text-slate-600">${c.text}</p>
+                    </div>
+                  `).join('') : '<p class="text-[11px] text-slate-400 italic">এখনো কোনো পরামর্শ জমা পড়েনি। নিচে আপনার সমাধান লিখুন।</p>'}
+                </div>
+
+                <!-- Add Comment Form -->
+                <div class="flex gap-1.5 pt-1">
+                  <input type="text" id="comment-input-${item.id}" placeholder="আপনার পরামর্শ বা আইনি সমাধান লিখুন..." class="flex-1 text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-800 focus:outline-none focus:ring-1 focus:ring-rose-600 placeholder:text-slate-400" />
+                  <button onclick="submitComment('${item.id}')" class="px-3 py-1.5 text-xs font-semibold text-white bg-rose-600 hover:bg-rose-700 rounded-lg transition-colors whitespace-nowrap">
+                    পাঠান
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Toggle description length
+    window.toggleDescription = function(id, encodedFull, encodedTrunc) {
+      const textEl = document.getElementById(`desc-text-${id}`);
+      const btnEl = document.getElementById(`desc-toggle-${id}`);
+      const fullText = decodeURIComponent(encodedFull);
+      const truncText = decodeURIComponent(encodedTrunc);
+
+      if (btnEl.textContent.trim() === 'আরও পড়ুন...') {
+        textEl.textContent = fullText;
+        btnEl.textContent = 'সংক্ষেপ করুন';
+      } else {
+        textEl.textContent = truncText;
+        btnEl.textContent = 'আরও পড়ুন...';
+      }
+    };
+
+    // Me-too Upvote Handler
+    window.handleUpvote = function(id) {
+      const item = AppState.grievances.find(g => g.id === id);
+      if (!item) return;
+
+      if (item.hasUpvoted) {
+        item.upvotes = Math.max(0, (item.upvotes || 1) - 1);
+        item.hasUpvoted = false;
+        showToast('সমর্থন তুলে নেওয়া হয়েছে');
+      } else {
+        item.upvotes = (item.upvotes || 0) + 1;
+        item.hasUpvoted = true;
+        AudioEngine.playPop();
+        showToast('আপনার সংহতি ও ভুক্তভোগী সাক্ষ্য যুক্ত হয়েছে!');
+      }
+
+      saveStorage();
+      renderFeed();
+    };
+
+    // Toggle comment drawer
+    window.toggleCommentDrawer = function(id) {
+      const drawer = document.getElementById(`comment-drawer-${id}`);
+      if (drawer) {
+        drawer.classList.toggle('hidden');
+        if (!drawer.classList.contains('hidden')) {
+          const input = document.getElementById(`comment-input-${id}`);
+          if (input) input.focus();
+        }
+      }
+    };
+
+    // Submit comment
+    window.submitComment = function(id) {
+      const input = document.getElementById(`comment-input-${id}`);
+      if (!input) return;
+      const val = input.value.trim();
+      if (!val) {
+        showToast('অনুগ্রহ করে পরামর্শ বা মন্তব্য লিখুন', 'error');
+        return;
+      }
+
+      const item = AppState.grievances.find(g => g.id === id);
+      if (!item) return;
+
+      if (!item.comments) item.comments = [];
+      item.comments.unshift({
+        author: 'সচেতন নাগরিক',
+        text: val,
+        time: 'এইমাত্র'
+      });
+
+      AudioEngine.playPop();
+      saveStorage();
+      renderFeed();
+      showToast('আপনার পরামর্শ সফলভাবে যুক্ত হয়েছে!');
+
+      setTimeout(() => {
+        const d = document.getElementById(`comment-drawer-${id}`);
+        if (d) d.classList.remove('hidden');
+      }, 50);
+    };
+
+    // Share Grievance
+    window.handleShare = function(id, title) {
+      const url = window.location.origin + window.location.pathname + '#feed-section';
+      if (navigator.share) {
+        navigator.share({
+          title: `নাগরিক ভোগান্তি: ${title}`,
+          text: `সরকারি অফিসে নাগরিক হয়রানির বিরুদ্ধে অভিজ্ঞতা পড়ুন: "${title}"`,
+          url: url
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(`${title} - বিস্তারিত পড়ুন: ${url}`).then(() => {
+          showToast('অভিযোগের লিংক ও বিবরণ ক্লিপবোর্ডে কপি করা হয়েছে');
+        });
+      }
+    };
+
+    // =========================================================================
+    // 9. AI CITIZEN ADVISOR LOGIC
+    // =========================================================================
+    function setupAdvisor() {
+      const modal = document.getElementById('advisor-modal');
+      const openBtn = document.getElementById('nav-open-advisor');
+      const heroBtn = document.getElementById('hero-advisor-btn');
+      const mobileBtn = document.getElementById('mobile-open-advisor');
+      const closeBtn = document.getElementById('close-advisor-btn');
+      const resultCard = document.getElementById('advisor-result-card');
+
+      function openModal(preset = 'passport') {
+        modal.classList.remove('hidden');
+        loadAdvisorPreset(preset);
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+
+      openBtn.addEventListener('click', () => openModal('passport'));
+      heroBtn.addEventListener('click', () => openModal('passport'));
+      mobileBtn.addEventListener('click', () => {
+        document.getElementById('mobile-nav-drawer').classList.add('hidden');
+        openModal('passport');
+      });
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // Preset click listeners
+      document.querySelectorAll('.preset-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-preset');
+          loadAdvisorPreset(key);
+        });
+      });
+
+      function loadAdvisorPreset(key) {
+        const data = ADVISOR_KNOWLEDGE[key] || ADVISOR_KNOWLEDGE.passport;
+
+        // Button active styles
+        document.querySelectorAll('.preset-btn').forEach(b => {
+          if (b.getAttribute('data-preset') === key) {
+            b.classList.add('border-teal-600', 'bg-teal-50');
+            b.classList.remove('border-slate-200');
+          } else {
+            b.classList.remove('border-teal-600', 'bg-teal-50');
+            b.classList.add('border-slate-200');
+          }
+        });
+
+        const stepsHtml = data.steps.map(s => `<li class="leading-relaxed">${s}</li>`).join('');
+        const hotlinesHtml = data.hotlines.map(h => `<span class="px-2.5 py-0.5 rounded-md bg-teal-100 text-teal-800 font-bold">${h}</span>`).join('');
+
+        resultCard.innerHTML = `
+          <div class="space-y-2.5 animate-in fade-in duration-150">
+            <div class="flex items-center justify-between text-xs font-semibold text-teal-700">
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-shield-check"></i>
+                <span>আইনি প্রতিকার সুপারিশ</span>
+              </span>
+              <span>${data.category}</span>
+            </div>
+
+            <h4 class="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+              ${data.title}
+            </h4>
+
+            <ol class="space-y-1.5 text-xs text-slate-700 list-decimal pl-5">
+              ${stepsHtml}
+            </ol>
+
+            <div class="pt-2.5 border-t border-teal-200 flex flex-wrap items-center justify-between gap-2 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-700">সংশ্লিষ্ট হেল্পলাইন:</span>
+                <div class="flex gap-1.5">${hotlinesHtml}</div>
+              </div>
+              <span class="text-[11px] text-teal-700 italic">${data.lawNote}</span>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // =========================================================================
+    // 10. REPORTING FORM & MODAL LOGIC
+    // =========================================================================
+    function setupReportModal() {
+      const modal = document.getElementById('report-modal');
+      const openBtn = document.getElementById('open-report-modal-btn');
+      const heroBtn = document.getElementById('hero-report-btn');
+      const emptyBtn = document.getElementById('empty-state-report-btn');
+      const closeBtn = document.getElementById('close-report-modal-btn');
+      const cancelBtn = document.getElementById('cancel-report-btn');
+      const form = document.getElementById('grievance-form');
+      const descInput = document.getElementById('form-description');
+      const charCounter = document.getElementById('char-counter');
+      const bribeYes = document.getElementById('bribe-yes');
+      const bribeNo = document.getElementById('bribe-no');
+      const bribeContainer = document.getElementById('bribe-amount-container');
+
+      function openModal() {
+        modal.classList.remove('hidden');
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+
+      openBtn.addEventListener('click', openModal);
+      heroBtn.addEventListener('click', openModal);
+      emptyBtn.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+      cancelBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // Escape key to dismiss
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+          document.getElementById('advisor-modal').classList.add('hidden');
+        }
+      });
+
+      // Bribe toggle
+      bribeYes.addEventListener('change', () => {
+        bribeContainer.classList.remove('hidden');
+        document.getElementById('form-bribe-amount').focus();
+      });
+      bribeNo.addEventListener('change', () => {
+        bribeContainer.classList.add('hidden');
+      });
+
+      // Character counter
+      descInput.addEventListener('input', () => {
+        const len = descInput.value.length;
+        charCounter.textContent = `${toBengaliNumber(len)}/১০০০`;
+      });
+
+      // Form Submit Handler
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const category = document.getElementById('form-category').value;
+        const location = document.getElementById('form-location').value.trim();
+        const title = document.getElementById('form-title').value.trim();
+        const description = descInput.value.trim();
+        const isBribe = bribeYes.checked;
+        const bribeAmount = isBribe ? Number(document.getElementById('form-bribe-amount').value || 0) : 0;
+        const status = document.getElementById('form-status').value;
+        const isAnonymous = document.getElementById('form-anonymous').checked;
+
+        if (!category || !location || !title || !description) {
+          showToast('অনুগ্রহ করে আবশ্যক ঘরগুলো পূরণ করুন', 'error');
+          return;
+        }
+
+        const newId = 'GRV-' + Math.floor(1000 + Math.random() * 9000);
+        const catName = CATEGORY_MAP[category]?.name || 'সাধারণ অভিযোগ';
+
+        const newGrievance = {
+          id: newId,
+          title: title,
+          category: category,
+          categoryName: catName,
+          location: location,
+          description: description,
+          bribeDemanded: isBribe,
+          bribeAmount: bribeAmount,
+          status: status,
+          statusText: STATUS_MAP[status]?.text || 'এখনো আটকে আছে',
+          author: isAnonymous ? 'বেনামী নাগরিক' : 'সচেতন নাগরিক',
+          timestamp: 'এইমাত্র',
+          createdAt: Date.now(),
+          upvotes: 1,
+          hasUpvoted: true,
+          comments: []
+        };
+
+        AppState.grievances.unshift(newGrievance);
+        saveStorage();
+
+        // Celebration Confetti
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 85,
+            spread: 65,
+            origin: { y: 0.6 }
+          });
+        }
+        AudioEngine.playSuccess();
+
+        showToast('আপনার অভিযোগ সফলভাবে সংরক্ষিত ও প্রকাশিত হয়েছে!');
+        form.reset();
+        bribeContainer.classList.add('hidden');
+        charCounter.textContent = '০/১০০০';
+        closeModal();
+
+        // Refresh feed & smooth scroll
+        renderFeed();
+        const feedSec = document.getElementById('feed-section');
+        if (feedSec) feedSec.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // =========================================================================
+    // 11. SEARCH, FILTERS & CONTROLS SETUP
+    // =========================================================================
+    function setupFilters() {
+      const searchInput = document.getElementById('feed-search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+      const sortSelect = document.getElementById('feed-sort-select');
+      const activeFilterLabel = document.getElementById('active-filter-label');
+
+      searchInput.addEventListener('input', (e) => {
+        AppState.searchQuery = e.target.value;
+        if (AppState.searchQuery) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+        renderFeed();
+      });
+
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        AppState.searchQuery = '';
+        clearSearchBtn.classList.add('hidden');
+        renderFeed();
+      });
+
+      sortSelect.addEventListener('change', (e) => {
+        AppState.currentSort = e.target.value;
+        renderFeed();
+      });
+
+      // Category Pill Buttons
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-cat');
+          AppState.currentCategory = cat;
+
+          document.querySelectorAll('.cat-pill').forEach(b => {
+            b.className = 'cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
+          });
+          btn.className = 'cat-pill px-3 py-1.5 rounded-full font-medium whitespace-nowrap bg-rose-600 text-white shadow-xs transition-all';
+
+          const catName = CATEGORY_MAP[cat]?.name || 'সকল সেবা';
+          activeFilterLabel.textContent = catName;
+
+          renderFeed();
+        });
+      });
+    }
+
+    // Sound and Responsive Mobile Nav Drawer Setup
+    function setupResponsiveNav() {
+      // Sound Toggle
+      const soundBtn = document.getElementById('sound-toggle-btn');
+      const soundIcon = document.getElementById('sound-icon');
+      const mobileSoundBtn = document.getElementById('mobile-sound-toggle-btn');
+
+      function toggleSound() {
+        AppState.soundEnabled = !AppState.soundEnabled;
+        if (AppState.soundEnabled) {
+          if (soundIcon) soundIcon.className = 'fa-solid fa-volume-high text-xs';
+          if (mobileSoundBtn) mobileSoundBtn.textContent = 'চালু';
+          showToast('সাউন্ড এফেক্ট চালু হয়েছে');
+          AudioEngine.playPop();
+        } else {
+          if (soundIcon) soundIcon.className = 'fa-solid fa-volume-xmark text-xs text-rose-500';
+          if (mobileSoundBtn) mobileSoundBtn.textContent = 'বন্ধ';
+          showToast('সাউন্ড এফেক্ট নিঃশব্দ করা হয়েছে');
+        }
+      }
+
+      if (soundBtn) soundBtn.addEventListener('click', toggleSound);
+      if (mobileSoundBtn) mobileSoundBtn.addEventListener('click', toggleSound);
+
+      // Mobile Menu Hamburger Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileDrawer = document.getElementById('mobile-nav-drawer');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileDrawer.classList.toggle('hidden');
+        if (isHidden) {
+          hamburgerIcon.className = 'fa-solid fa-bars text-sm';
+        } else {
+          hamburgerIcon.className = 'fa-solid fa-xmark text-sm';
+        }
+      });
+
+      // Auto close drawer when clicking a mobile link
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileDrawer.classList.add('hidden');
+          hamburgerIcon.className = 'fa-solid fa-bars text-sm';
+        });
+      });
+
+      // Reset Storage Button
+      document.getElementById('reset-storage-btn').addEventListener('click', () => {
+        if (confirm('আপনি কি পূর্বনির্ধারিত ডেমো অভিযোগগুলো পুনঃস্থাপন করতে চান?')) {
+          AppState.grievances = [...SEED_GRIEVANCES];
+          saveStorage();
+          renderFeed();
+          showToast('ডেমো তথ্য সফলভাবে পুনঃস্থাপন করা হয়েছে');
+        }
+      });
+    }
+
+    // App Initialization on DOM Ready
+    document.addEventListener('DOMContentLoaded', () => {
+      startBengaliClock();
+      initStorage();
+      setupFilters();
+      setupReportModal();
+      setupAdvisor();
+      setupResponsiveNav();
+      renderFeed();
+    });
+  </script>
+
+  <!-- Vite compatibility anchor to ensure seamless compilation -->
+  <div id="root" style="display:none;"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
